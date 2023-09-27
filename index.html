@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+    <style>
+        *{font-family: 'Luckiest Guy', cursive;
+font-family: 'Poppins', sans-serif;}
+body{
+    background-image: linear-gradient(to right, #8360c3, #2ebf91);
+    color: white;
+}
+    </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@300;400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">    
+</head>
+<body>
+<h1 id="time" style="text-align: center; margin-top: 200px; font-size: 140px;"></h1>
+<p id="date" style="font-family: 'Sacramento', cursive; margin-top:-100px; text-align: center; font-size: 65px;"></p>
+
+    <script>
+        
+        setInterval(()=>{
+            const date = new Date()
+        const time = date.toLocaleTimeString()
+        const today = date.toDateString()
+        const text = document.getElementById("time")
+        const crDate = document.getElementById("date")
+        crDate.innerHTML=`${today}`
+        text.innerHTML=`${time}`
+
+    }
+            ,1000)
+    </script>
+</body>
+</html>
